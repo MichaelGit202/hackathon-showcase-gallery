@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ProjectGrid from './ProjectGrid';
 import { Project, projects } from '../data/projects';
-import { Gesture, BarChart3, Heart } from 'lucide-react';
+import { Fingerprint, BarChart3, Heart } from 'lucide-react';
 
 const ProjectTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'ai-gestures' | 'algorithmic-trading' | 'health-wellness'>('ai-gestures');
@@ -26,7 +26,7 @@ const ProjectTabs: React.FC = () => {
           onClick={() => setActiveTab('ai-gestures')}
         >
           <div className="flex items-center space-x-2">
-            <Gesture size={18} />
+            <Fingerprint size={18} />
             <span>AI Gestures</span>
           </div>
         </button>
