@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import React from 'react';
+import HackathonHeader from '../components/HackathonHeader';
+import ProjectTabs from '../components/ProjectTabs';
+
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen pb-20">
+      <div className="max-w-7xl mx-auto">
+        <HackathonHeader />
+        <ProjectTabs />
       </div>
+      
+      <footer className="text-center text-gray-400 text-sm mt-16">
+        <p>© 2025 TechInnovate Hackathon. All projects showcased with permission.</p>
+      </footer>
     </div>
   );
 };
