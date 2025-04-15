@@ -17,7 +17,7 @@ const HackathonHeader: React.FC = () => {
         </div>
         
         <div className="bg-hackathon-card p-2 rounded-md w-32 h-32 flex items-center justify-center border border-hackathon-accent/30">
-          <img src='./src/data/assets/acm.png'></img>  
+          <img src='./assets/acm.png'></img>  
         </div>
       </div>
       

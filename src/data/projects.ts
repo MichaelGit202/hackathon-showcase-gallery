@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: "Hand Motion Controller",
     category: "ai-gestures",
     rank: 1, // Gold
-    videoUrl: "./src/data/vids/team7.mp4" // Local video file path
+    videoUrl: "./assets/team7.mp4" // Local video file path
   },
   {
     id: 2,
