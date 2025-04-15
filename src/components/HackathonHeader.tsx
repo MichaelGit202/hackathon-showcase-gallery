@@ -4,20 +4,35 @@ import React from 'react';
 const HackathonHeader: React.FC = () => {
   return (
     <div className="text-center py-8 px-4 mb-8">
-      <div className="inline-block bg-gradient-to-r from-hackathon-accent to-hackathon-accent2 p-[2px] rounded-lg mb-4">
-        <div className="bg-hackathon-background rounded-lg px-6 py-2">
-          <h4 className="font-inter font-medium text-hackathon-accent">TechInnovate 2025</h4>
+      <div className="flex justify-center items-center mb-6 space-x-8">
+        {/* Logo placeholders - replace with actual logo images when available */}
+        <div className="bg-hackathon-card p-2 rounded-md w-55 h-32 flex items-center justify-center border border-hackathon-accent/30">
+            <img src="./assets/acm.png" alt="ACM Logo" className="h-full w-auto object-contain" />
+        </div>
+
+        
+        <div className="inline-block bg-gradient-to-r from-hackathon-accent to-hackathon-accent2 p-[2px] rounded-lg">
+          <div className="bg-hackathon-background rounded-lg px-6 py-2">
+            <h4 className="font-inter font-medium text-hackathon-accent">Behrend ACM</h4>
+          </div>
+        </div>
+        
+        <div className="bg-hackathon-card p-2 rounded-md w-55 h-32 flex items-center justify-center border border-hackathon-accent/30">
+            <img src="./assets/behrend.png" alt="ACM Logo" className="h-full w-auto object-contain" />
         </div>
       </div>
+      
       <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-hackathon-accent to-hackathon-accent2 bg-clip-text text-transparent">
-        Hackathon Showcase
+        Spring 2025 Hackathon 
       </h1>
       <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-        Celebrating innovation and creativity across AI, finance, and health technologies. 
-        Browse through our winning projects and all amazing submissions.
+        Hosted by the Behrend ACM chapter, this year's hackathon featured cutting-edge projects including an AI gesture-based Rock-Paper-Scissors game, an algorithmic trading system, and a health & wellness app. The event brought together passionate students to build, learn, and push the boundaries of technology in just 8 hours.
       </p>
     </div>
   );
 };
 
+
+//Hosted by the Behrend ACM chapter, this year's hackathon featured cutting-edge projects including an AI gesture-based Rock-Paper-Scissors game, an algorithmic trading system, and a health & wellness app. The event brought together passionate students to build, learn, and push the boundaries of technology in just 8 hours.
+    
 export default HackathonHeader;
