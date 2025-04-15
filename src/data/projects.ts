@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   teamName: string;
   image: string;
-  videoUrl: string;
+  videoUrl?: string; // Make videoUrl optional since not all projects might have videos
   rank?: number;
   category: 'ai-gestures' | 'algorithmic-trading' | 'health-wellness';
 }
@@ -17,6 +17,7 @@ export const projects: Project[] = [
     title: "Hand Motion Controller",
     category: "ai-gestures",
     rank: 1, // Gold
+    videoUrl: "/videos/project1.mp4" // Local video file path
   },
   {
     id: 2,

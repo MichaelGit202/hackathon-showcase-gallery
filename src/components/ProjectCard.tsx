@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { Project } from '../data/projects';
 
 interface ProjectCardProps {
@@ -11,7 +11,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovering, setIsHovering] = useState(false);
   
-  // Determine card styling based on rank
   const getCardClass = () => {
     switch (rank) {
       case 1:
@@ -25,7 +24,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     }
   };
   
-  // Determine medal color based on rank
   const getBadgeDetails = () => {
     switch (rank) {
       case 1:
@@ -107,12 +105,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </DialogTrigger>
       
       <DialogContent className="max-w-[90vw] max-h-[90vh]">
-        {videoUrl && (
+        <DialogTitle className="sr-only">{title}</DialogTitle>
+        {videoUrl ? (
           <video 
             src={videoUrl}
             className="w-full h-full"
             controls
             autoPlay
+          />
+        ) : (
+          <img 
+            src={image}
+            alt={title}
+            className="w-full h-full object-contain"
           />
         )}
       </DialogContent>
