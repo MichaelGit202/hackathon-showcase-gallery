@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Award, Medal } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Project } from '../data/projects';
 
 interface ProjectCardProps {
@@ -8,7 +7,9 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { teamName, image, title, rank } = project;
+  const { teamName, image, title, rank, videoUrl } = project;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
   
   // Determine card styling based on rank
   const getCardClass = () => {
@@ -40,30 +41,82 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   
   const badgeDetails = getBadgeDetails();
   
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+    videoRef.current?.play();
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    videoRef.current?.pause();
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+    }
+  };
+  
   return (
-    <div 
-      className={`award-card bg-hackathon-card rounded-xl overflow-hidden transition-all duration-300 
-                  hover:animate-card-hover shadow-lg ${getCardClass()}`}
-    >
-      {badgeDetails && (
-        <div className={`award-badge ${badgeDetails.color} w-10 h-10`}>
-          <span className="text-lg">{badgeDetails.emoji}</span>
+    <Dialog>
+      <DialogTrigger asChild>
+        <div 
+          className={`award-card bg-hackathon-card rounded-xl overflow-hidden transition-all duration-300 
+                    hover:animate-card-hover shadow-lg ${getCardClass()} cursor-pointer`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {badgeDetails && (
+            <div className={`award-badge ${badgeDetails.color} w-10 h-10 z-20`}>
+              <span className="text-lg">{badgeDetails.emoji}</span>
+            </div>
+          )}
+          
+          <div className="h-48 overflow-hidden relative">
+            {videoUrl ? (
+              <>
+                <img 
+                  src={image} 
+                  alt={title} 
+                  className={`w-full h-full object-cover transition-opacity duration-300 ${
+                    isHovering ? 'opacity-0' : 'opacity-100'
+                  }`}
+                />
+                <video 
+                  ref={videoRef}
+                  src={videoUrl}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                    isHovering ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  muted
+                  playsInline
+                  loop
+                />
+              </>
+            ) : (
+              <img 
+                src={image} 
+                alt={title} 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            )}
+          </div>
+          
+          <div className="p-4">
+            <h3 className="text-lg font-semibold mb-1">{title}</h3>
+            <p className="text-sm text-gray-300">{teamName}</p>
+          </div>
         </div>
-      )}
+      </DialogTrigger>
       
-      <div className="h-48 overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
-        />
-      </div>
-      
-      <div className="p-4">
-        <h3 className="text-lg font-semibold mb-1">{title}</h3>
-        <p className="text-sm text-gray-300">{teamName}</p>
-      </div>
-    </div>
+      <DialogContent className="max-w-[90vw] max-h-[90vh]">
+        {videoUrl && (
+          <video 
+            src={videoUrl}
+            className="w-full h-full"
+            controls
+            autoPlay
+          />
+        )}
+      </DialogContent>
+    </Dialog>
   );
 };
 

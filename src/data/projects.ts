@@ -1,12 +1,12 @@
-
-export type Project = {
+export interface Project {
   id: number;
+  title: string;
   teamName: string;
   image: string;
-  title: string;
+  videoUrl: string;
+  rank?: number;
   category: 'ai-gestures' | 'algorithmic-trading' | 'health-wellness';
-  rank?: 1 | 2 | 3; // 1 for gold, 2 for silver, 3 for bronze
-};
+}
 
 export const projects: Project[] = [
   // AI Gestures Projects
