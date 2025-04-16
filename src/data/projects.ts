@@ -16,7 +16,8 @@ export const projects: Project[] = [
     image: "./assets/team2.png",
     title: "Trading dashboard and trading algo",
     category: "algorithmic-trading",
-    rank: 1,
+    videoUrl: "./assets/team2.mp4",
+    rank: 1
   },
   {
     id: 3,
@@ -24,7 +25,8 @@ export const projects: Project[] = [
     image: "./assets/team3.png",
     title: "RPS Game with Graphics and Multiplayer",
     category: "ai-gestures",
-    rank: 3,
+    videoUrl: "./assets/team3.mp4",
+    rank: 3
   },
   {
     id: 4,
@@ -32,7 +34,8 @@ export const projects: Project[] = [
     image: "./assets/team4.png",
     title: "3d Unity RPS game",
     category: "ai-gestures",
-    rank: 1,
+    videoUrl: "./assets/team4.mp4",
+    rank: 1
   },
   {
     id: 5,
@@ -40,6 +43,7 @@ export const projects: Project[] = [
     image: "./assets/team5.png",
     title: "history terminal and trading algorithm",
     category: "algorithmic-trading",
+    videoUrl: "./assets/team5.mp4",
   },
   {
     id: 6,
@@ -47,6 +51,7 @@ export const projects: Project[] = [
     image: "./assets/team6.png",
      title: "Mobile RPS Roulette",
     category: "ai-gestures",
+    videoUrl: "./assets/team6.mp4",
     rank: 2
   },
 
@@ -58,7 +63,7 @@ export const projects: Project[] = [
     image: "./assets/team7.png",
     title: "RPS Battle",
     category: "ai-gestures",
-    videoUrl: "./assets/team7.mp4"
+    videoUrl: "./assets/team7.mp4",
   },
   {
     id: 8,
@@ -66,6 +71,7 @@ export const projects: Project[] = [
     image: "./assets/team8.png",
     title: "Recipe Website",
     category: "health-wellness",
+    videoUrl: "./assets/team8.mp4"
   },
   {
     id: 10,
@@ -73,6 +79,7 @@ export const projects: Project[] = [
     image: "./assets/team10.png",
      title: "Mindful - Best Sales Pitch",
     category: "health-wellness",
+    videoUrl: "./assets/team10.mp4"
   },
   {
     id: 11,
@@ -80,6 +87,7 @@ export const projects: Project[] = [
     image: "./assets/team11.png",
     title: "RPS with Custom Algo",
     category: "ai-gestures",
+    videoUrl: "./assets/team11.mp4"
   },
 
   // Health & Wellness Projects
@@ -89,7 +97,8 @@ export const projects: Project[] = [
     image: "./assets/team12.png",
     title: "My Pack",
     category: "health-wellness",
-    rank: 1,
+    videoUrl: "./assets/team12.mp4",
+    rank: 1
   },
   {
     id: 13,
@@ -97,7 +106,8 @@ export const projects: Project[] = [
     image: "./assets/team13.png",
     title: "Trading dashboard and algo",
     category: "algorithmic-trading",
-    rank: 3,
+    videoUrl: "./assets/team13.mp4",
+    rank: 3
   },
   
   {
@@ -105,6 +115,7 @@ export const projects: Project[] = [
     teamName: "Vitaliy Pikalo and Ghali Ouaritini - Team 16 ", // No associated award info
     image: "./assets/team16.png",
     title: "RPS Multiplayer and RPS with difficulty",
+    videoUrl: "./assets/team16.mp4",
     category: "ai-gestures",
   },
   {
@@ -113,6 +124,7 @@ export const projects: Project[] = [
     image: "./assets/team17.png",
     title: "Trading interface and SMA algo",
     category: "algorithmic-trading",
+    videoUrl: "./assets/team17.mp4",
     rank:2 
   },
   {
@@ -121,7 +133,8 @@ export const projects: Project[] = [
     image: "./assets/team19.png",
     title: "Health Explorer",
     category: "health-wellness",
-    rank: 3,
+    videoUrl: "./assets/team19.mp4",
+    rank: 3
   },
   {
     id: 21,
@@ -129,6 +142,7 @@ export const projects: Project[] = [
     image: "./assets/team21.png",
     title: "DigiPals",
     category: "health-wellness",
+    videoUrl: "./assets/team21.mp4"
   },
   {
     id: 22,
@@ -136,7 +150,8 @@ export const projects: Project[] = [
     image: "./assets/team22.png",
     title: "Baby SWENG",
     category: "health-wellness",
-    rank: 2
+    rank: 2,
+    videoUrl: "./assets/team22.mp4"
   },
   {
     id: 24,
@@ -144,5 +159,6 @@ export const projects: Project[] = [
     image: "./assets/team24.png",
     title: "RPS Game",
     category: "ai-gestures",
+    videoUrl: "./assets/team24.mp4"
   },
 ];
