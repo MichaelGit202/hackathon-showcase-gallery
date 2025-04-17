@@ -12,6 +12,10 @@ const Index: React.FC = () => {
         <GroupPhoto />
         <ProjectTabs />
       </div>
+      
+      <footer className="text-center text-gray-400 text-sm mt-16">
+        <p>Hackathon footer</p>
+      </footer>
     </div>
   );
 };
