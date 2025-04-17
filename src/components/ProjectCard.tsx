@@ -104,12 +104,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
       </DialogTrigger>
       
-      <DialogContent className="max-w-[90vw] max-h-[90vh]">
+      <DialogContent className="max-w-[50vw] max-h-[50vh]">
         <DialogTitle className="sr-only">{title}</DialogTitle>
         {videoUrl ? (
           <video 
             src={videoUrl}
-            className="w-full h-full"
+            className="w-75 h-75"
             controls
             autoPlay
           />
@@ -117,7 +117,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <img 
             src={image}
             alt={title}
-            className="w-full h-full object-contain"
+            className="w-full h-80 object-contain"
           />
         )}
       </DialogContent>

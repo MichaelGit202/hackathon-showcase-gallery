@@ -6,8 +6,8 @@ const HackathonHeader: React.FC = () => {
     <div className="text-center py-8 px-4 mb-8">
       <div className="flex justify-center items-center mb-6 space-x-8">
         {/* Logo placeholders - replace with actual logo images when available */}
-        <div className="bg-hackathon-card p-2 rounded-md w-32 h-16 flex items-center justify-center border border-hackathon-accent/30">
-          <span className="text-hackathon-accent font-medium">Behrend Logo</span>
+        <div className="bg-hackathon-card p-2 rounded-md w-32 h-32 flex items-center justify-center border border-hackathon-accent/30">
+            <img className="rounded-md" src='./assets/behrend.jpg'></img>  
         </div>
         
         <div className="inline-block bg-gradient-to-r from-hackathon-accent to-hackathon-accent2 p-[2px] rounded-lg">
@@ -25,7 +25,7 @@ const HackathonHeader: React.FC = () => {
           Spring 2025 Hackathon
       </h1>
       <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-        Hosted by the Behrend ACM chapter, this year's hackathon categories included AI gesture-based Rock-Paper-Scissors game, an algorithmic trading system, and a health & wellness app. The event brought together passionate Behrend students to build, learn, and test their skills in just 8 hours.
+        The Behrend ACM chapter recently hosted an engaging and fast-paced hackathon that challenged passionate students to conceive, develop, and test innovative projects within a compressed eight-hour timeframe. This year's event showcased a diverse range of technical interests, with participants tackling categories such as an AI gesture-based Rock-Paper-Scissors game leveraging technologies like Google MediaPipe, an algorithmic trading system, and a health & wellness application potentially utilizing React Native and REST services, alongside resources like Lovable, Cursor, React, and Claude.
       </p>
     </div>
   );
