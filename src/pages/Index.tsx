@@ -12,10 +12,6 @@ const Index: React.FC = () => {
         <GroupPhoto />
         <ProjectTabs />
       </div>
-      
-      <footer className="text-center text-gray-400 text-sm mt-16">
-        <p>© 2025 TechInnovate Hackathon. All projects showcased with permission.</p>
-      </footer>
     </div>
   );
 };
